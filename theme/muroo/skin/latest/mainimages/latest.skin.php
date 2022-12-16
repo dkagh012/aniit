@@ -28,7 +28,9 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     ?>
         <li>
             <a href="<?php echo $list[$i]['href'] ?>" class="lt_img"><?php echo $img_content; ?></a>
-        <div class="lt_name_background"></div>
+        <div class="lt_name_bottom_background "></div>
+        <div class="lt_name_top_background "></div>
+        
             <div class="lt_name">
         <?php
         

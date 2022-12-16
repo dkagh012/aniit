@@ -229,11 +229,19 @@ display: block;
 font-size: .85em;
 padding: 10px;
 } */
-
-.lt_name_background{
+.lt_name_bottom_background{
   width: 100%;
   position: absolute;
   height: 17%;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(22, 22, 34, 0) 0%, #1E1E2D 69.34%);
+background: linear-gradient(180deg, rgba(22, 22, 34, 0) 0%, #1E1E2D 69.34%);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+}
+.lt_name_top_background{
+  width: 100%;
+  position: absolute;
+  height: 17%;
+  top: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.142308) -10.06%, rgba(0, 0, 0, 0.4) 100%, rgba(0, 0, 0, 0) 88.98%);
 }

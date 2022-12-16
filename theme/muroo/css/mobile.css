@@ -40,10 +40,7 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 .to_content a {z-index:100000;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0;overflow:hidden}
 #mobile-indicator {display:none}
 
-#hd_wrapper {
-    height: 80px;
-    background: #161622;
-}
+
 #hd_wrapper:after {display:block;visibility:hidden;clear:both;content:""}
 #hd_wrapper .gnb_side_btn {float:left;display:inline-block}
 #hd_wrapper .gnb_side_btn a {display:inline-block;width:48px;height:48px;line-height:48px;text-align:center;font-size:2em;vertical-align:top;cursor:pointer;color:#9da5b4;border:0}
@@ -70,15 +67,15 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 	color: #6F7181;;
   opacity: 1;
 }
-
 .header_ct {float:right}
 .hd_sch_wr {display:inline-block;float:right}
-.hd_sch_bt {position:absolute;right:102px;width:48px;height: 60px;vertical-align:top;font-size:1.5em;cursor:pointer;color: #ffffff;background: #1e1e2d;border:0}
+
+.hd_sch_bt {position:absolute;right: 185px;width: 40px;top:20px;height: 40px;vertical-align:top;font-size:1.5em;cursor:pointer;color: #ffffff;background: transparent;border:0}
 
 #hd_sch {display:none ; position:absolute;;left:250px ;text-align:center;z-index: 9999}
 #hd_sch h2 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
 #hd_sch form {position:relative}
-#hd_sch #sch_stx {width: 1000px;height: 80px;padding-left: 73px;border:0px;color: #ffffff;background:#161622;font-style: normal;font-weight: 400;font-size: 18px;} 
+#hd_sch #sch_stx {width: 1278px;height: 80px;padding-left: 73px;border:0px;color: #ffffff;background:#161622;font-style: normal;font-weight: 400;font-size: 18px;} 
 #hd_sch #sch_submit {position:absolute;top: 12px;left: 27px;width: 21px;height: 60px;border:0;cursor:pointer;color: #6F7181;background:transparent;font-size: 1.8em;line-height: 20px;}
 .sch_more_close {position:absolute;right:-48px;top:0;width:40px;height:37px;border:0;cursor:pointer;color:#dedede;background:#fff;font-size:1.8em;text-align:center;vertical-align:top}
 
@@ -89,15 +86,15 @@ ul,li,dl,dt,dd {list-style:none;padding:0;margin:0}
 #tnb .profile_btn i {display:inline-block;font-size:1.2em;padding:0 5px;vertical-align:middle;color:#c1c4c6}
 #tnb .tnb_login {display:inline-block;font-family: 'Noto Sans CJK KR';font-style: normal;font-weight: 500;font-size: 22px;line-height: 33px;
 /* identical to box height */text-align: center;position: absolute;right: 37px;top: 24px;color: #6F7181;width: 171px;height: 48px;}
-#tnb-arm{
-	    display: inline-block;
-	    border: 0;
-	    height: 48px;
-	    width: 48px;
-	    background: transparent;
-	    position: absolute;
-	    right: 134px;
-	    top: 37px;
+#tnb-arm {
+    display: inline-block;
+    border: 0;
+    height: 48px;
+    width: 48px;
+    background: transparent;
+    position: absolute;
+    right: 119px;
+    top: 29px;
 }
 
 #tnb .tnb_member {display:none;position:absolute;top:58px;right:0;border-radius:3px;width:150px;background:#fff;z-index:999;box-shadow:0px 1px 5px 1px #e4e4e4}
@@ -159,15 +156,16 @@ font-size: 22px;} */
 #wrapper {min-height:100%;clear:both}
 #wrapper:after {display:block;visibility:hidden;clear:both;content:""}
 
-#container {width:100%;position: absolute;top: 80px;left: 250px;background:#1e1e2d;}
+#container {width:100%;position: absolute;left: 250px;background:#1e1e2d;}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container_title {font-size:1.6em;font-weight:bold;padding:10px;line-height:30px;color:#333;text-align:center}
 #container .conle {
 
-
-  width: 86%;
-  height:100%;
-  }
+	width: calc(100% - 250px); 
+	
+	height:100%;
+	
+	}
 #container .conri {width:24%;float:left;margin-left:1%}
 
 
@@ -623,3 +621,20 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 	.header_ct {width:25%;float:right}
 	.m_side_gnb {width:25%}
 }
+/* @media (max-width:2880px){
+	#container .conle {width: 91%;}
+}
+
+@media (max-width:2200px){
+	#container .conle {width: 88%;}
+}
+
+@media (max-width:1920px){
+	#container .conle {width: 87%;}
+}
+@media (max-width:1880px){
+	#container .conle {width: 86%;}
+}
+@media (max-width:1440px){
+	#container .conle {width: 86%;}
+} */
