@@ -36,7 +36,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         
         <div class="header_ct">
 			<div class="hd_sch_wr" id="hd_sch_wr_test">
-	        	<button class="hd_sch_bt"><i class="fa fa-search"></i><span class="sound_only">검색창 열기</span></button>
+	        	<button class="hd_sch_bt"><i class="fa-thin fa-magnifying-glass"></i><span class="sound_only">검색창 열기</span></button>
+	        	<!-- <button class="hd_sch_bt"><i class="fa fa-search"></i><span class="sound_only">검색창 열기</span></button> -->
 	            <fieldset id="hd_sch">
 		            <h2>사이트 내 전체검색</h2>
 		            <form name="fsearchbox" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);" method="get">

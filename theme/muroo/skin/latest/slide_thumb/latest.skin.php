@@ -43,7 +43,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
             $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
         ?>
 
-        <div class="swiper-slide swiper-slide-slide">>
+        <div class="swiper-slide swiper-slide-slide">
             <!-- 링크를 걸었는 부분 -->
             <a href="<?php echo $wr_href; ?>">
                 <?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?>
@@ -56,11 +56,11 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                         <li class="slide_title cut">
 
                             <!-- 카테고리 -->
-                           [<?php
+                           <?php
             if ($list[$i]['ca_name']) {
                 echo $list[$i]['ca_name'];
             }
-                        ?>]
+                        ?>
                             <!-- 이름 -->
                             <?php echo $list[$i]['subject'] ?>
 
