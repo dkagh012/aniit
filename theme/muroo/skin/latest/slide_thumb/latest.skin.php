@@ -22,7 +22,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/css/swiper.css">
 <!-- } -->
 
-<div class="swiper-container swiper-container-slide" style="padding-bottom:50px;padding-left:120px;padding-right:70px;">
+<div class="swiper-container swiper-container-slide">
     <div class="swiper-wrapper">
 
         <?php
@@ -56,11 +56,11 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                         <li class="slide_title cut">
 
                             <!-- 카테고리 -->
-                           <?php
+                           [<?php
             if ($list[$i]['ca_name']) {
                 echo $list[$i]['ca_name'];
             }
-                        ?>
+                        ?>]
                             <!-- 이름 -->
                             <?php echo $list[$i]['subject'] ?>
 
@@ -97,7 +97,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         slidesPerColumnFill: 'row',
         slidesPerView: 3, // 가로갯수
         slidesPerColumn: 10, // 세로갯수
-        spaceBetween: 35, // 간격
+        // spaceBetween: 35, // 간격
         touchRatio: 1, // 드래그 가능여부(1, 0)
 
         autoplay: {
@@ -110,16 +110,23 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         },
 
         breakpoints: { // 반응형 처리
-            1440: {
+
+
+            1024: {
                 slidesPerColumnFill: 'row',
                 slidesPerView: 3,
                 slidesPerColumn: 10,
                 spaceBetween: 35
             },
-
-            3580: {
+            768: {
                 slidesPerColumnFill: 'row',
-                slidesPerView: 3,
+                slidesPerView: 2,
+                slidesPerColumn: 10,
+                spaceBetween: 35
+            },
+            250: {
+                slidesPerColumnFill: 'row',
+                slidesPerView: 1,
                 slidesPerColumn: 10,
                 spaceBetween: 35
             },
