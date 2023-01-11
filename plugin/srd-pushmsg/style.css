@@ -13,7 +13,7 @@
 #sir_armv .list_tit{display:inline-block;text-overflow: ellipsis;  overflow: hidden;  white-space: nowrap; width:500px}
 #sir_armv .list_del {position:absolute;top:9px;right:0;padding:3px;background:#ff4f91}
 #sir_armv em {color:#ff3061;font-style:normal}
- 
+
 #sir_armv #list_empty {padding:100px 0}
  
 #sir_armv .sir_bw02 {float:left;margin:0 0 10px}
@@ -24,6 +24,7 @@
 
  
 li#ol_arm{border-left:0;}
+
 #ol_arm {z-index:10001;position:relative;cursor:pointer;color:#fff;} 
 #ol_arm #arm_cnt {color:#fff;vertical-align:top}
 #ol_arm #arm_cnt.arm1 {font-weight:bold}
@@ -38,3 +39,11 @@ li#ol_arm{border-left:0;}
 #ol_arm dd .arm_del img {display:inline-block;position:relative;top:-7px;left:1px}
 #ol_arm #arm_all a {display:block;padding:7px 0;background:#fff;color:#69797c;letter-spacing:-0.1em;text-align:center;margin:0;}
 #ol_arm #arm_empty {padding:20px 0;width:100%;text-align:center}
+#ol_arm>span{
+    font-size:22px;
+}
+@media all and (max-width:1440px){
+    #ol_arm>span{
+        font-size:17px;
+    }
+}

@@ -30,7 +30,7 @@ $msg_count = $result['cnt'];
 ?>
 <div id="tnb">
 <ul>
-<li id="ol_arm"><span style="margin-right:5px; font-size:22px;"><i class="fa fa-bell-o" aria-hidden="true"></i> </span><span class="<?php echo $armbg ?>" id="arm_cnt"><?php echo $msg_count?></span><dl></dl>    <dl id="dd_arm" style="display: none;">
+<li id="ol_arm"><span><i class="fa fa-bell-o" aria-hidden="true"></i> </span><span class="<?php echo $armbg ?>" id="arm_cnt"><?php echo $msg_count?></span><dl></dl>    <dl id="dd_arm" style="display: none;">
 </li>
 <!-- ajax return -->
 <?php

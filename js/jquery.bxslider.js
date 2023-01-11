@@ -43,7 +43,7 @@
 
 		// PAGER
 		pager: true,
-		pagerType: 'full',
+		pagerType: 'short',
 		pagerShortSeparator: ' / ',
 		pagerSelector: null,
 		buildPager: null,
@@ -55,10 +55,10 @@
 		prevText: 'Prev',
 		nextSelector: null,
 		prevSelector: null,
-		autoControls: false,
+		autoControls: true,
 		startText: 'Start',
 		stopText: 'Stop',
-		autoControlsCombine: false,
+		autoControlsCombine: true,
 		autoControlsSelector: null,
 
 		// AUTO
@@ -641,8 +641,8 @@
 		 * Appends prev / next controls to the controls element
 		 */
 		var appendControls = function(){
-			slider.controls.next = $('<a class="bx-next" href="" ><img class="bx-next-back" src="../img/right.png">' + slider.settings.nextText + '</a>');
-			slider.controls.prev = $('<a class="bx-prev" href=""><img class="bx-prev-back " src="../img/left.png">'+ + slider.settings.prevText + '</a>');
+			slider.controls.next = $('<a class="bx-next" href="" >' + slider.settings.nextText + '</a>');
+			slider.controls.prev = $('<a class="bx-prev" href="">'+ + slider.settings.prevText + '</a>');
 			// bind click actions to the controls
 			slider.controls.next.bind('click', clickNextBind);
 			slider.controls.prev.bind('click', clickPrevBind);
