@@ -24,6 +24,12 @@ echo latest('theme/xns_gnuboard_latest_gallery_thumbnail', 'ani', 6, 23);
 
 ?>
 </div>
+<div>
+<?php
+echo latest('theme/community', 'ani', 9, 23);
+
+?>
+</div>
 
  <?php
 /* thumb_width, thumb_width : 배너이미지 가로,세로 크기 */

@@ -28,9 +28,14 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
 
   <div id="hd_wrapper">
 
-    <div id="logo">
-      <a href="<?php echo G5_URL ?>">LOGO LOGO</a>
-    </div>
+  <div id="logo">
+        	<div class="logo_inner">
+            	<a href="<?php echo G5_URL ?>">
+            		<span class="sound_only"><?php echo $config['cf_title']; ?></span>
+            		<img src="<?php echo G5_IMG_URL ?>/logo.png" alt="<?php echo $config['cf_title']; ?>">
+            	</a>
+        	</div>
+        </div>
     <ul id="gnb_1dul">
       <?php
       $menu_datas = get_menu_db(1, true);
@@ -42,7 +47,7 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
 
         <?php if ($row['me_name'] == "COMMUNITY") { ?>
           <li class="gnb_1dli <?php echo $_GET["bo_table"] == "free" ? "menu_color" : "free gnb_1dlie"; ?>">
-
+          
           <?php } else if ($row['me_name'] == "NEWS") { ?>
             <li class="gnb_1dli <?php echo $_GET["bo_table"] == "notice" ? "menu_color" : "notice gnb_1dlie"; ?>">
 
@@ -120,17 +125,18 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
 
     <ul id="tnb" class="pc_view">
       <?php if ($is_member) { ?>
-        <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">정보수정</a>
-        </li>
-        <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
-        <?php if ($is_admin) { ?>
-          <li class="tnb_admin"><a href="<?php echo G5_ADMIN_URL ?>">관리자</a></li>
-        <?php } ?>
+        <div id="tnb">
+            <?php echo outlogin("theme/basic"); ?>
+        </div>
+        <div id="tnb-arm">
+            <?php if ($is_member) { ?>
+                <?php include_once(G5_PATH . '/plugin/srd-pushmsg/pushmsg_view.php'); ?>
+            <?php } ?>
+        </div>
       <?php } else { ?>
         <li class="head_login"><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
         <li class="head_up"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
       <?php } ?>
-
     </ul>
     <!-- <button type="button" id="gnb_open" class="m_view"><i class="fa fa-bars" aria-hidden="true"></i><span
         class="sound_only"> 메뉴열기</span></button>

@@ -1,55 +1,49 @@
 <?php
 if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
+// 스크랩 갯수 표시
+$sql = " select count(*) as cnt from {$g5['scrap_table']} where mb_id = '{$member['mb_id']}' ";
+$row = sql_fetch($sql);
+$scrap_cnt = $row['cnt'];
+
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$outlogin_skin_url.'/style.css">', 0);
 ?>
 
+<button class="profile_btn">
+	<span class="profile_img"><?php echo get_member_profile_img($member['mb_id']); ?></span>
+</button>
+
 <!-- 로그인 후 외부로그인 시작 -->
-<aside id="ol_after" class="ol box">
-   
-    <h2>나의 회원정보</h2>
-    <div class="ol_wr">
-        <button type="button" class="btn_close m_view"><span class="sound_only">닫기</span><i class="fa fa-times"></i></button>
-        <div id="ol_after_hd">
-            <span class="profile_img">
-                <?php echo get_member_profile_img($member['mb_id']); ?>
-                <a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php" id="ol_after_info" title="정보수정"><span class="sound_only">정보수정</span><i class="fa fa-cog"></i></a>
-            </span>
-            <strong><?php echo $nick ?>님</strong>
-            <div id="ol_after_btn">
-                <a href="<?php echo G5_BBS_URL ?>/logout.php" id="ol_after_logout">로그아웃</a>
-            </div>
-        </div>
+<div class="tnb_member">
+	<ul>
+		<li class="tnb_me">
+			<span class="profile_img">
+	            <?php echo get_member_profile_img($member['mb_id']); ?>
+	            <a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php"><i class="fa fa-cog" aria-hidden="true"></i><span class="sound_only">정보수정</span></a>
+	        </span>
+	        <strong><?php echo $nick ?>님</strong>
+		</li>
+		<li><a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank">쪽지<span <?php echo ($memo_not_read ? 'class="arm_on"' : '') ?>><?php echo $memo_not_read ?></span></a></li>
+		<li><a href="<?php echo G5_BBS_URL ?>/point.php" target="_blank">포인트<span <?php echo ($point ? 'class="arm_on"' : '') ?>><?php echo $point ?></span></a></li>
+		<li><a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank">스크랩<span <?php echo ($scrap_cnt ? 'class="arm_on"' : '') ?>><?php echo $scrap_cnt ?></span></a></li>
+		<?php if ($is_admin == 'super' || $is_auth) { ?>
+		<li>
+	        <a href="<?php echo G5_ADMIN_URL ?>" class="btn_admin">관리자</a>
+	    <li>
+		<?php } ?>
+		<li class="tnb_logout"><a href="<?php echo G5_BBS_URL ?>/logout.php" id="ol_after_logout">로그아웃</a></li>
+    </ul>
+</div>
 
-       
-
-        <ul id="ol_after_private">
-            <li id="ol_after_memo">
-                <a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" class="win_memo">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="pc_sound_only">안 읽은 쪽지</span>
-                    <strong><?php echo $memo_not_read ?></strong>
-                </a>
-            </li>
-            <li id="ol_after_pt">
-                <a href="<?php echo G5_BBS_URL ?>/point.php" target="_blank" class="win_point">
-                    <i class="fa fa-database"></i>
-                    <span class="pc_sound_only"> 포인트</span>
-                    <strong><?php echo $point ?></strong>
-                </a>
-            </li>
-            <li id="ol_after_scrap">
-                
-                <a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" class="win_scrap"><i class="fa fa-thumb-tack"></i> <span class="pc_sound_only">스크랩</span></a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="m_view ol_bg"></div>
-
-</aside>
 <script>
+// 회원메뉴 열기
+$(document).ready(function(){
+    $(document).on("click", ".profile_btn", function() {
+        $(".tnb_member").toggle();
+    });
+});
+
 // 탈퇴의 경우 아래 코드를 연동하시면 됩니다.
 function member_leave()
 {
