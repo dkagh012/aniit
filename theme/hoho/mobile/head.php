@@ -123,16 +123,16 @@ include_once(G5_LIB_PATH . '/popular.lib.php');
       <?php } ?>
     </ul>
 
-    <ul id="tnb" class="pc_view">
+    <ul id="profile_list" class="pc_view">
       <?php if ($is_member) { ?>
-        <div id="tnb">
+        <li id="tnb">
             <?php echo outlogin("theme/basic"); ?>
-        </div>
-        <div id="tnb-arm">
+        </li>
+        <li id="tnb-arm">
             <?php if ($is_member) { ?>
                 <?php include_once(G5_PATH . '/plugin/srd-pushmsg/pushmsg_view.php'); ?>
             <?php } ?>
-        </div>
+        </li>
       <?php } else { ?>
         <li class="head_login"><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
         <li class="head_up"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>

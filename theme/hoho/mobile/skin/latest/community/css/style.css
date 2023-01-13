@@ -65,3 +65,20 @@ div.cm-desc {
   color: #FFFFFF;
 }
 
+
+@media all and (max-width:1440px){
+  .cm-responsive{
+    padding-right: 15px;
+padding-bottom: 30px;
+}
+div.cm-gallery img {
+
+  height: 250px;
+}
+}
+@media all and (max-width:1024px){
+
+div.cm-gallery img {
+  height: 200px;
+}
+}

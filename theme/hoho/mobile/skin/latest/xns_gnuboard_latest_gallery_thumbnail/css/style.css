@@ -65,3 +65,19 @@ div.desc {
   color: #FFFFFF;
 }
 
+@media all and (max-width:1440px){
+  .responsive{
+    padding-right: 15px;
+padding-bottom: 30px;
+}
+div.gallery img {
+  height: 250px;
+}
+}
+
+@media all and (max-width:1024px){
+
+div.gallery img {
+  height: 200px;
+}
+}

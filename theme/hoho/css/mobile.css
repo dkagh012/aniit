@@ -105,7 +105,7 @@ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 #26E2B3;
 }
 
-@media (min-width: 970px){
+
     #gnb {background:#1c1827;display:block !important}
     #gnb:after {display:block;visibility:hidden;clear:both;content:""}
     .gnb_wr{max-width:1200px;padding-right:200px;margin:0 auto;position:relative;}
@@ -126,17 +126,15 @@ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     #hd_sch #sch_submit {background:none;border-radius:0;width:50px;height:60px}
     #hd_sch .sch_cl_btn{position:absolute;top:0;right:0;width:50px;height:60px;background:none;border:0;color:#817f86;font-size:16px}
     #hd_sch .sch_cl_btn:hover{color:#fff}
-    #logo{padding: 24px 93px;width: 25%;font-size: 32px;text-align: center;}
+    #logo{padding: 23px 93px;width: 25%;font-size: 32px;text-align: center;}
 
     
 #tnb {
     position: relative;
-    float: right;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 100%;
-    padding-top: 30px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
 }
 
 #tnb:after {
@@ -153,7 +151,7 @@ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     width: 48px;
     background: transparent;
     position: absolute;
-    right: 52px;
+    right: 20px;
     top: 33px;
 }
 
@@ -195,7 +193,6 @@ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     width: 48px;
     background: transparent;
     position: absolute;
-    right: 119px;
     top: 39px;
 }
 
@@ -212,7 +209,7 @@ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
     #sch_op_btn{position:absolute;top:0;right:0;width:50px;height:60px;border:0;background:none;color:#fff}
 
-}
+
 
 /* 텍스트 크기 조절 */
 #text_size {margin:0 0 10px;text-align:center;display:inline-block;padding:7px 20px;background:#e6e7e9;border-radius:25px;height:48px;}
@@ -236,7 +233,7 @@ box-shadow: 0 0 5px  rgba(100,100,100,0.2);}
 
 .box{background:#fff;border:1px solid #e8e8e8}
 
-@media (min-width: 970px){
+
     #wrapper {
         /* margin:0 auto; max-width:1920px */
     }
@@ -245,16 +242,16 @@ box-shadow: 0 0 5px  rgba(100,100,100,0.2);}
     #idx_right{position:absolute;top:0;right:0;width:300px;margin:20px 0;padding:0 10px}
     .pc_sound_only{display:inline-block;position:absolute;top:0;left:0;margin:0 !important;padding:0 !important;width:1px !important;height:1px !important;font-size:0 !important;line-height:0 !important;overflow:hidden}
     #container_title {font-size:1.846em;margin:0 0 10px}
-}
 
 
-@media (max-width: 969px){
+
+
     #idx_right{margin:0 10px 10px;padding:0}
-    #idx_left{margin:  0;padding:0}
+    #idx_left{margin:  0;padding-top: 0;}
     .latest_wr{}
     #container_title  {background:#fff;padding:15px;border-bottom:1px solid #d8dde4;font-size:1.154em	}
 
-}
+
 
 /* 하단 레이아웃 */
 #ft {background:#fff;padding:15px }
@@ -344,15 +341,15 @@ button.btn_cancel {display:inline-block;;border:1px solid #ccc;background:#fafaf
 a.btn_frmline, button.btn_frmline {display:inline-block;padding:0 5px;;border:0;background:#333;color:#fff;letter-spacing:-0.1em;text-decoration:none;vertical-align:top} /* 우편번호검색버튼 등 */
 button.btn_frmline {font-size:1em}
 
-@media (max-width: 969px){
+
     .pc_view{display:none}
     .m_view{display:block}
-}
 
-@media (min-width: 970px){
+
+
     .pc_view{display:block}
     .m_view{display:none}
-}
+
 
 /* 게시판용 버튼 */
 a.btn_b01,.btn_b01 {display:inline-block;background:#fff;color:#333;border:1px solid #ddd;text-decoration:none;vertical-align:middle}
@@ -499,3 +496,22 @@ box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);}
 .pg_next {background:url(../img/btn_next.gif) no-repeat 50% 50% ;width:30px;height:30px ;text-indent:-999px;overflow:hidden}
 .pg_end {background:url(../img/btn_end.gif) no-repeat 50% 50% ;width:30px;height:30px ;text-indent:-999px;overflow:hidden}
 .pg_current {display:inline-block;background:#4a5ba9;color:#fff;font-weight:normal;border-radius:33px;line-height:30px;}
+
+@media all and (max-width:1440px){
+    #logo {
+        padding: 24px 0px 24px 0px;
+    
+    }
+    .gnb_1da{
+    font-size:1rem;
+    }
+    .gnb_1dli{
+    padding: 3px 15px;}
+    
+    #hd_wrapper{
+        padding: 0px 10px;
+    }
+    .latest_img {
+        padding: 0px 15px;
+    }
+}

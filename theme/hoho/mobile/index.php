@@ -18,13 +18,13 @@ echo latest('theme/main', 'free', 10, 23);
     <!-- 메인화면 최신글 끝 -->
     
 </div>
-<div>
+<div class="latest_img">
 <?php
 echo latest('theme/xns_gnuboard_latest_gallery_thumbnail', 'ani', 6, 23);
 
 ?>
 </div>
-<div>
+<div class=latest_img>
 <?php
 echo latest('theme/community', 'ani', 9, 23);
 
