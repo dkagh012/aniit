@@ -49,7 +49,7 @@ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     background: black;
 }
 #hd_wrapper:after {display:block;visibility:hidden;clear:both;content:""}
@@ -152,7 +152,7 @@ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     background: transparent;
     position: absolute;
     right: 20px;
-    top: 33px;
+    top: -24px;
 }
 
 #tnb .profile_btn .profile_img img {
@@ -341,13 +341,14 @@ button.btn_cancel {display:inline-block;;border:1px solid #ccc;background:#fafaf
 a.btn_frmline, button.btn_frmline {display:inline-block;padding:0 5px;;border:0;background:#333;color:#fff;letter-spacing:-0.1em;text-decoration:none;vertical-align:top} /* 우편번호검색버튼 등 */
 button.btn_frmline {font-size:1em}
 
-
-    .pc_view{display:none}
+.pc_view {
+    display: flex;
+    align-items: center;
+}
     .m_view{display:block}
 
 
 
-    .pc_view{display:block}
     .m_view{display:none}
 
 
